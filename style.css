@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding: 0 50px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+nav .left a {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+nav .right a {
+    color: black;
+    margin: 0 10px;
+}
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+/* hero section */
+.hero-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 60px 0;
+    padding: 0 50px;
+    gap: 40px;
+}
+.hero-container .text {
+    font-size: 1.2rem;
+}
+.hero-container .text h2 span::after {
+    content: "";
+    animation: words 5s linear infinite;
+}
+@keyframes words {
+    1%, 20%{
+        content: "Game development";
+    } 
+    21%, 40% {
+        content: "React";
+    }
+    41%, 60% {
+        content: "Javascript";
+    }
+    61%, 80% {
+        content: "Tailwind";
+    }
+    81%, 100% {
+        content: "Typescript";
+    }
+}
+
+.hero-container .headshot img {
+    border-radius: 50%;
+    width: 300px;
+    justify-content: right;
+}
+.hero-container .links a{
+    margin-top: 15px;
+
+    color: black;
+    padding: 0 10px;
+    font-size: 20px;
+    border: 2px solid blue;
+    margin-right: 15px;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    display: inline-block;
+}
+.hero-container .links a span {
+    margin-left: 5px;
+}
+.hero-container .links a:hover {
+    color: gray;
+    background-color: aqua;
+}
+.skill-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.skill-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+.skill-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.skill-section .cells {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.skill-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.skill-section .cells .cell:hover {
+    transform: scale(1.2);
+}
+.skill-section .cells .cell span {
+    margin-left: 10px;
+}
+.skill-section .cells .cell img {
+    width: 40px;
+}
+.testimony-section {
+    padding: 0 50px;
+}
+.testimony-section .group {
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 30px;
+}
+.testimony-section .hero {
+    text-align: center;
+}
+.testimony-section .msg {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+    font-size: 1.3rem;
+}
+.testimony-section img {
+    width: 250px;
+    border-radius: 50%;
+    border: 2px solid red;
+    object-fit: cover;
+}
+.contact-container {
+    padding: 0 50px;
+    margin-bottom: 50px;
+}
+.contact-container .group {
+    margin-top: 10px;
+    display: flex;
+}
+.contact-container .text {
+    flex: 3;
+    margin-right: 30px;
+}
+.contact-container form {
+    flex: 3;
+    flex-direction: column;
+    display: flex;
+}
+.contact-container .group form input,
+.contact-container .group form textarea {
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid blue;
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+.contact-container .group form button {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 8px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.contact-container button:hover {
+    filter: brightness(.9);
+}
+.hero-container .headshot img,
+.testimony-section img {
+    height: auto;
+}
+@media (max-width: 768px) {
+    /* navbar */
+    nav {
+        padding: 0 20px;
+    }
+    nav .left a {
+        font-size: 30px;
+    }
+    nav .right a span {
+        display: none;
+    }
+    /* hero section */
+    .hero-container {
+        padding: 0 20px;
+        flex-direction: column-reverse;
+    }
+    .hero-container .text {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .hero-container .text .links a {
+        font-size: 1rem;
+        display: inline-block;
+    }
+    .skill-section {
+        padding: 0 20px;
+    }
+    .skill-section .text {
+        font-size: 1rem;
+    }
+    .testimony-section {
+        padding: 0 20px;
+    }
+    .testimony-section .group {
+        flex-direction: column;
+    }
+    .testimony-section .msg {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .contact-container {
+        padding: 0 20px;
+    }
+    .contact-container h2 {
+        text-align: center;
+    }
+    .contact-container .text {
+        text-align: center;
+    }
+    .contact-container .group {
+        flex-direction: column;
+        font-size: 1rem;
+    }
+    .contact-container .group form input,
+    .contact-container .group form textarea {
+        padding: 5px;
+    }
+    .contact-container .group form button {
+        height: 40px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    nav {
+        padding: 0 30px;
+    }
+    .hero-container {
+        padding: 0 30px;
+        gap: 20px;
+    }
+    .hero-container .headshot img {
+        width: 250px;
+    }
+    .skill-section,
+    .testimony-section,
+    .contact-container {
+        padding: 0 30px;
+    }
+    
+}
