@@ -12,6 +12,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 /* navbar */
@@ -59,7 +61,7 @@ nav .right a span {
     animation: words 5s linear infinite;
 }
 @keyframes words {
-    1%, 20%{
+    0%, 20%{
         content: "Game development";
     } 
     21%, 40% {
